@@ -70,7 +70,11 @@ public class Frame extends JPanel implements KeyListener, ActionListener{
 	}	
 	
 	Timer t;
-	/*Setup the Frame*/
+	/*Setup the Frame
+         This is the constructor for the Frame class.
+         It helps create the JFrame and Animation Timer. 
+	 Do not alter any code here unless you know how!
+	*/
 	public Frame() {
 		JFrame f = new JFrame("Pong");
 		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -78,11 +82,9 @@ public class Frame extends JPanel implements KeyListener, ActionListener{
 		f.add(this);
 		f.addKeyListener(this);
 		f.setResizable(false);
-		
 		t = new Timer(16, this);
 		t.start();
 		f.setVisible(true);
-		
 	}
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
